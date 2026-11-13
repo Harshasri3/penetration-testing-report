@@ -72,12 +72,12 @@ dnsrecon -d networkwalks.com
 
 The module uses six tools to inspect domain registration, web technologies, DNS resolution, HTTP headers, WAF presence and DNS records.
 
-![alt text](whois.png)
-![alt text](whatweb.png)
-![alt text](nslookup.png)
-![alt text](curl.png)
-![alt text](wafw00f.png)
-![alt text](dnsrecon.png)
+![WHOIS Output](screenshots/whois.png)
+![alt text](screenshots/whatweb.png)
+![alt text](screenshots/nslookup.png)
+![alt text](screenshots/curl.png)
+![alt text](screenshots/wafw00f.png)
+![alt text](screenshots/dnsrecon.png)
 
 ## 2. W2-PM2 – GHDB-Based Footprinting
 
@@ -91,7 +91,7 @@ This module introduces the Google Hacking Database and search operators (Google 
 The module covers installing Maltego on Windows and using it to identify email addresses related to `networkwalks.com` within the lab's authorized scope.
 
 **Findings:** 
-![maltego](<maltego.png>)
+![maltego](screenshots/maltego.png)
 
 ## 4. W2-PM4 – Footprinting with theHarvester
 
@@ -106,7 +106,7 @@ theHarvester -d microsoft.com -b all -l 50
 
 Check `theHarvester -h` because source names and options may vary by installed version. Record the source, limit, emails, subdomains, counts and any errors. Remove API keys before publishing.
 
-![theHarvester](theHarvester.png)
+![theHarvester](screenshots/theHarvester.png)
 
 ---
 
