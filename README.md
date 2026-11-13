@@ -26,7 +26,6 @@ This repository documents my Week 2 project activities in footprinting, reconnai
 | W2-PM4 theHarvester | `microsoft.com` | Passive collection of public email addresses and subdomains |
 | W2-PM5 Zenmap | Own LAN | Ping Scan and host discovery |
 
-> **Authorization:** Public indexing does not authorize access to private camera feeds, credentials, accounts or sensitive systems. Perform all activities only within the approved lab scope. The local network scan below was performed on my own LAN.
 
 ## 🗺️ The 5 Phases of a Penetration Test
 
@@ -79,34 +78,100 @@ The module uses six tools to inspect domain registration, web technologies, DNS 
 ![alt text](screenshots/wafw00f.png)
 ![alt text](screenshots/dnsrecon.png)
 
-## 2. W2-PM2 – GHDB-Based Footprinting
+## PM2 – Google Dorking and Google Hacking Database (GHDB)
 
-This module introduces the Google Hacking Database and search operators (Google dorks). The tasks cover search patterns related to indexed security-camera results and public mathematics e-book PDF listings.
+### Objective
+To understand how advanced Google search operators can be used to find publicly indexed information.
 
-**Responsible handling:** Do not access or publish private camera feeds, credentials or sensitive systems. Use instructor-provided training targets or safe, non-sensitive authorized examples.
+### Tools Used
+- Google Search
+- Google Hacking Database (GHDB)
+
+### Practical Work
+
+**1. Google Dorking**
+
+Practiced advanced Google search operators to filter search results and identify specific information.
+
+Examples:
+
+```text
+site:example.com
+filetype:pdf site:example.com
+intitle:"index of"
+inurl:login
+```
 
 
-## 3. W2-PM3 – Footprinting with Maltego
+**2. Google Hacking Database (GHDB)**
 
-The module covers installing Maltego on Windows and using it to identify email addresses related to `networkwalks.com` within the lab's authorized scope.
+Explored GHDB to understand different search queries used for identifying publicly indexed information.
+
+
+### Learning Outcome
+Learned how to use Google search operators and GHDB for information gathering and reconnaissance.
+
+## PM3 – Footprinting Using Maltego
+
+### Objective
+To understand how Maltego can be used to visualize relationships between domains and other publicly available entities.
+
+### Tool Used
+- Maltego
+
+### Practical Work
+
+1. Installed and opened Maltego on Windows.
+2. Created a new investigation graph.
+3. Added `networkwalks.com` as the starting domain.
+4. Explored available transforms.
+5. Examined the relationships displayed in the graph.
 
 **Findings:** 
 ![maltego](screenshots/maltego.png)
 
-## 4. W2-PM4 – Footprinting with theHarvester
+### Observation
+Maltego displayed relationships between the starting domain and the entities returned by the selected transforms.
 
-**Target:** `microsoft.com`
+### Learning Outcome
+Learned how to create investigation graphs, execute transforms and visualize relationships during OSINT investigations.
 
-The module specifies two runs:
+
+## PM4 – Footprinting Using theHarvester
+
+### Objective
+To collect publicly available information associated with a domain using theHarvester.
+
+### Tool Used
+- theHarvester
+
+### Practical Work
+
+**1. Checking Available Options**
 
 ```bash
-theHarvester -d microsoft.com -b baidu -l 1000
-theHarvester -d microsoft.com -b all -l 50
+theHarvester -h
 ```
 
-Check `theHarvester -h` because source names and options may vary by installed version. Record the source, limit, emails, subdomains, counts and any errors. Remove API keys before publishing.
+Used to view the available commands and options.
+
+**2. Information Gathering**
+
+```bash
+theHarvester -d example.com -b baidu
+```
+
+Used to search for publicly available information associated with the specified domain using the selected data source.
+
+**3. Reviewing Results**
+
+Examined the output for discovered email addresses, subdomains and hostnames.
 
 ![theHarvester](screenshots/theHarvester.png)
+
+### Learning Outcome
+Learned how to use theHarvester for OSINT-based information gathering and understand the information returned by different data sources.
+
 
 ---
 
